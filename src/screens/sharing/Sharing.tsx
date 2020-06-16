@@ -34,13 +34,7 @@ export const SharingScreen = () => {
         [platform]: () => {
           switch (platform) {
             case 'instagram': {
-              shareInstagramStory(
-                theme.colors.mainBackground,
-                Platform.select({
-                  android: i18n.translate('Sharing.Message'),
-                  ios: i18n.translate('Sharing.InstagramImageUrl'),
-                })!,
-              );
+              shareInstagramStory(theme.colors.mainBackground);
               break;
             }
             case 'messages': {
